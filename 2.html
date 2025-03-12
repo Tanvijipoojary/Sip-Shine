@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SIP & SHINE</title>
+    <link rel="stylesheet" href="2.css">
+    <style>
+   .image-container {
+      display: flex; 
+      background-color: white; 
+      transition: background-image 0.3s ease; /* Transition for background image */
+    }
+
+    .image-container img {
+      transition: transform 0.3s ease;
+      margin-right: 10px; 
+    }
+
+    .image-container img:hover {
+      transform: scale(1.1);
+    }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <div class="left-section">
+            <a href="#"> Home</a>
+            <a href="#"> Know Sip & Shine</a>
+            <a href="#"> Product</a>
+            <div class="logo">SIP & SHINE</div>
+        </div>
+        <div class="right-section">
+            <a href="signin.html">👤</a>
+            <a href="#">🛒</a>
+            <button class="buy-button">Buy Now</button>
+        </div>
+    </div>
+<div>
+    <img src="1.png" heigth="980px" width="1560px" style="align-content: center; padding: 10px;" >
+</div>
+<div class="image-container">
+  <img src="long-kiwi.png" alt="Image 1" data-bg-image="kback.png">
+  <img src="long-watermelon.png" alt="Image 2" data-bg-image="wback.png">
+  <img src="long-lime.png" alt="Image 3" data-bg-image="lback.png">
+</div>
+
+<section class="products">
+  <div class="product-grid" style="display: flex;">
+    <div class="product">
+      <a href="Kiwi.html" class="product">
+        <img src="pk.png" alt="Product 1" width="500px">
+        <h1>Sip & Shine</h1>
+        <h3>KIWI</h3>
+        <p>RS. 150</p>
+      </a>
+    </div>
+    <div class="product">
+      <a href="watermelon.html" class="product">
+        <img src="pw.png" alt="Product 2" width="500px">
+        <h1>Sip & Shine</h1>
+        <h3>WATERMELON</h3>
+        <p>RS. 150</p>
+      </a>
+    </div>
+    <div class="product">
+      <a href="lemon.html" class="product">
+        <img src="pl.png" alt="Product 3" width="500px">
+        <h1>Sip & Shine</h1>
+        <h3>LEMON</h3>
+        <p>RS. 150</p>
+    </div>
+  </div>
+</section>
+
+
+<script>
+const container = document.querySelector('.image-container');
+const images = document.querySelectorAll('.image-container img');
+
+images.forEach(img => {
+  img.addEventListener('mouseover', () => {
+    container.style.backgroundImage = `url(${img.dataset.bgImage})`;
+  });
+
+  img.addEventListener('mouseout', () => {
+    container.style.backgroundImage = 'none'; // Reset to no background image
+  });
+});
+</script>
+
+<footer>
+    <p>&copy; 2025 Sip & Shine</p>
+</footer>
+</body>
+</html>

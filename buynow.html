@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Summary - Sip & Shine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header {
+            background-color: lightblue;
+            color: black;
+            text-align: center;
+            padding: 9px 0;
+            font-family: Tempus Sans ITC;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex-grow: 1;
+        }
+
+        .order-summary {
+            margin-bottom: 20px;
+        }
+
+        .order-summary h2 {
+            color: #1a237e;
+            margin-bottom: 10px;
+        }
+
+        .order-details p {
+            margin: 8px 0;
+            padding-top: 10px;
+        }
+
+        .total {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 20px;
+            text-align: right;
+        }
+
+        .back-button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            text-decoration: none;
+            text-align: center;
+            width: 150px;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #f0f0f0;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Order Confirmation - Sip & Shine</h1>
+    </div>
+
+    <div class="container">
+        <img src="3pack.png" style="height: 200px;width: auto;"> 
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            <div class="order-details">
+                <p><strong>Product: </strong> <span id='j'> </span> 500ml</p>
+                <p><strong>Quantity:</strong> <span id="quantityDisplay"></span></p>
+                <p><strong>Price:</strong> Rs 150</p>
+                
+            </div>
+        </div>
+
+        <div class="total">
+            Total: Rs <span id="totalDisplay"></span>
+        </div>
+
+        <a href="2.html" class="back-button">Back to Product</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Sip & Shine</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const quantityInput = localStorage.getItem('quantity');
+            const juice = localStorage.getItem('name');
+            const quantity = quantityInput ? parseInt(quantityInput) : 1;
+            const price = 150;
+            const total = quantity * price;
+            document.getElementById('j').innerHTML=juice;
+
+            document.getElementById('quantityDisplay').textContent = quantity;
+            document.getElementById('totalDisplay').textContent = total;
+
+        });
+    </script>
+</body>
+</html>

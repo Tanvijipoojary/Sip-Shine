@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign In</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            height: 100vh;
+            margin: 0;
+            background-image: url('singinback.png'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .s {
+            background-color: rgba(255, 255, 255, 0.4); 
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+            width: 300px;
+        }
+
+        .s h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .s input[type="text"],
+        .s input[type="password"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .s button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 10px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 93%;
+            align-items: center;
+        }
+
+        .s button:hover {
+            background-color: #0056b3;
+        }
+
+        .error-message {
+          color: red;
+          text-align: center;
+          margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="s">
+        <h1 style="font-family: Tempus Sans ITC;text-align: center;font-weight: bold;font-weight: bold;font-size: 50px;">Sip & Shine</h1>
+        <h2 style="font-family:Tempus Sans ITC ;">Sign In</h2>
+        <div id="error" class="error-message"></div>
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button onclick="signIn()">Sign In</button>
+    </div>
+
+    <script>
+        function signIn() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorDiv = document.getElementById('error');
+            errorDiv.textContent = '';
+
+            if (!username || !password) {
+                errorDiv.textContent = "Please enter both username and password.";
+                return;
+            }
+
+            if (username === 'tanviji_98' && password === '0123') {
+                window.location.href = '2.html';
+            } else {
+                errorDiv.textContent = "Invalid username or password.";
+            }
+        }
+    </script>
+</body>
+</html>

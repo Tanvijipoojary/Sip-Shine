@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 150%;
+    max-width: 1550px; /* Adjust as needed */
+    padding: 0px;
+    align-content: center;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+}
+
+.left-section a {
+    text-decoration: none;
+    color: #000;
+    margin-left: 20px;
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0 400px;
+    font-family:Tempus Sans ITC;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.right-section a {
+    margin-left: 18px;
+    text-decoration: none;
+    color: #000;
+}
+
+.buy-button {
+    background-color: #1a237e;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.left-image {
+  width: 35%;
+}
+
+.left-image img {
+  width: 600px;
+  height: auto;
+}
+
+.center-images {
+  width: 35%;
+  display: flex;
+  flex-direction: column; /* Arrange images vertically */
+  align-items: center;   /* Center images horizontally */
+}
+
+.center-images img {
+  width: 370px;
+  height: auto;
+  margin-bottom: 20px; /* Add spacing between images */
+  margin-left: 80px;
+}
+
+.right-text {
+  width: 50%;
+  margin-right: 40px;
+  margin-left: 30px;
+}
+
+
+
+  .quantity-control {
+    display: flex;
+    align-items: center;
+  }
+
+  .quantity-control button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    border-radius: 5px 5px 5px 5px;
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  .quantity-control input {
+    width: 40px;
+    height: 20px;
+    text-align: center;
+    margin: 0 5px;
+    border-radius: 5px 5px 5px 5px;
+  }
+
+  .buy-now {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px 10px 10px 10px;
+    font-family: cursive;
+  }
+
+footer {
+    text-align: center;
+    padding: 5px 0;
+    background-color: #f0f0f0;
+    font-family: sans-serif;
+}
+</style>
+</head>
+<body>
+
+<body>
+    <div class="header-container">
+        <div class="left-section">
+            <a href="2.html"> Home</a>
+            <a href="#"> Know Sip & Shine</a>
+            <a href="#"> Product</a>
+            <div class="logo">SIP & SHINE</div>
+        </div>
+
+    </div>
+<div>
+
+<div class="container">
+  <div class="left-image">
+    <img src="pl.png" alt="Image 1">
+  </div>
+
+  <div class="center-images">
+    <img src="3pack.png" alt="Image 2">
+    <img src="lemon.png" alt="Image 3">
+  </div>
+
+  <div class="right-text">
+    <h2 style="font-family: Tempus Sans ITC;font-size: 50px;margin-top: 10px;">Sip & Shine</h2>
+    <p style="font-family: serif;font-size: 20px;">LEMON JUICE 500ml</p>
+    <p><b>Sip & Shine: Your Daily Dose of Hydration and Radiance.<p></b>
+
+<p>Key benefits:</p>
+
+<p><ol><li>Hydration: Replenishes fluids and electrolytes for optimal hydration.
+<li>Skin health: Supports collagen production and protects against free radical damage for radiant, healthy skin.
+<li>Energy boost: Provides a natural energy boost without the jitters or crash.
+<li>Delicious and refreshing: Enjoy a burst of flavor that will brighten your day.</p>
+
+  <h1 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 20px; text-decoration: none;">Other Flavour</h1>
+  <a href="watermelon.html" style="text-decoration: none;">
+  <img src="pw.png" width="50px" height="50px" style="padding-left: 50px;">
+  </a>
+  <a href="kiwi.html">
+    <img src="pk.png" width="50px" height="50px" style="padding-left: 47px;">
+  </a>
+  <p style="padding-left: 35px;font-weight: 100;margin-top: 6px;">Watermelon &nbsp &nbsp &nbsp &nbsp  &nbsp &nbspkiwi</p>
+
+	<p style="font-family:cursive;font-size: 20px;">Rs : 150 </p>
+
+	<div class="quantity-control" style="display: flex; margin-right: 10px; align-items: right;">
+        <button onclick="decreaseQuantity(this)">-</button>
+        <input type="number" value="1" min="1">
+        <button onclick="increaseQuantity(this)">+</button>
+      </div>
+      <br>
+      <button class="buy-now">Buy Now</button>
+  </div>
+</div>
+
+  <script>
+    function increaseQuantity(button) {
+      const input = button.previousElementSibling;
+      input.value = parseInt(input.value) + 1;
+    }
+
+    function decreaseQuantity(button) {
+      const input = button.nextElementSibling;
+      const currentValue = parseInt(input.value);
+      if (currentValue > 1) {
+        input.value = currentValue - 1;
+      }
+    }
+  </script>
+
+    <script>
+    function increaseQuantity(button) {
+        const input = button.previousElementSibling;
+        input.value = parseInt(input.value) + 1;
+    }
+
+    function decreaseQuantity(button) {
+        const input = button.nextElementSibling;
+        const currentValue = parseInt(input.value);
+        if (currentValue > 1) {
+            input.value = currentValue - 1;
+        }
+    }
+
+    document.querySelector('.buy-now').addEventListener('click', function() {
+        const quantity = document.querySelector('.quantity-control input').value;
+        localStorage.setItem('quantity', quantity); // Store quantity
+        localStorage.setItem('name',"Lemon Juice");
+        window.location.href = 'buynow.html'; // Redirect to order summary page
+    });
+</script>
+
+
+<footer>
+    <p>&copy; 2025 Sip & Shine</p>
+</footer>
+
+</body>
+</html>
